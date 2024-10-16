@@ -11,4 +11,15 @@ entries:
     urls:
     - example-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-27T09:04:24.720281494Z"
+  stackstate-k8s-ext:
+  - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2024-10-16T14:21:28.731964765Z"
+    description: A Helm chart for Kubernetes
+    digest: 479abaac5301d7b4e0f2f5faaaebb7e45283f64c3b94b18841c0532d6979546e
+    name: stackstate-k8s-ext
+    type: application
+    urls:
+    - stackstate-k8s-ext-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-10-16T14:21:28.731976437Z"
