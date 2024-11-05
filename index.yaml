@@ -22,4 +22,15 @@ entries:
     urls:
     - stackstate-k8s-ext-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-16T14:21:28.731976437Z"
+  stackstate-openlit-ext:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-11-05T14:25:13.864061507Z"
+    description: A Helm chart for Kubernetes
+    digest: 62b75a864791e1ca597ab62248724f1983dc04ddc480cce0d20075514824cbce
+    name: stackstate-openlit-ext
+    type: application
+    urls:
+    - stackstate-openlit-ext-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-05T14:25:13.864070464Z"
