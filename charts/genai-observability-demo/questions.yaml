@@ -1,0 +1,22 @@
+questions:
+- variable: otlpEndpoint
+  label: "OTLP Endpoint"
+  type: string
+  description: "Open Telemetry Endpoint"
+  required: true
+  group: General
+
+- variable: ollamaEndpoint
+  label: "Ollama Endpoint"
+  type: secret
+  description: "Ollama Host"
+  required: true
+  group: General
+
+- variable: schedule
+  label: "Schedule"
+  type: string
+  default: "*/5 * * * *"
+  description: "Cron schedule for user simulation request to apps"
+  required: true
+  group: General
