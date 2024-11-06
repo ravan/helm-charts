@@ -9,7 +9,14 @@ questions:
 - variable: apiKey
   label: "API Key"
   type: secret
-  description: "Suse Observability Api Key"
+  description: "Suse Observability Api Key used to send data."
+  required: true
+  group: General
+
+- variable: apiToken
+  label: "API Token"
+  type: secret
+  description: "Suse Observability CLI api token."
   required: true
   group: General
 

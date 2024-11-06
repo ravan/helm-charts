@@ -5,6 +5,7 @@
 # Suse Observability auth details
 serverUrl: ''
 apiKey: ''
+apiToken: ''
 clusterName: ''
 schedule: '*/5 * * * *'
 

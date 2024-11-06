@@ -38,13 +38,16 @@ spec:
                   key: API_KEY
                   name: {{ include "stackstate-openlit-ext.fullname" . }}-secret
             - name: STACKSTATE_API_TOKEN
-              value: notused
+              valueFrom:
+                secretKeyRef:
+                  key: API_TOKEN
+                  name: {{ include "stackstate-openlit-ext.fullname" . }}-secret
             - name: KUBERNETES_IN_CLUSTER
               value: "true"
             - name: KUBERNETES_CLUSTER
               value: {{ $clusterName }}
             - name: INSTANCE_TYPE
-              value: k8s-ext
+              value: openlit
             - name: INSTANCE_URL
               value: {{ $clusterName }} 
             resources:
