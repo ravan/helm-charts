@@ -1,13 +1,13 @@
-clusterName: ""
-apiKey: ""
-otlpHost: ""
+clusterName: ''
+apiKey: ''
+otlpHost: ''
 
 opentelemetry-collector:
   image:
-    repository: "otel/opentelemetry-collector-k8s"
+    repository: 'otel/opentelemetry-collector-k8s'
   extraEnvsFrom:
-  - secretRef:
-      name: open-telemetry-collector
+    - secretRef:
+        name: open-telemetry-collector
   mode: deployment
   ports:
     metrics:
@@ -20,47 +20,50 @@ opentelemetry-collector:
     extensions:
       bearertokenauth:
         scheme: SUSEObservability
-        token: "${env:API_KEY}"
+        token: '${env:API_KEY}'
     exporters:
       otlp/stackstate:
         auth:
           authenticator: bearertokenauth
-        endpoint: "${env:OTLP_HOST}:443"
+        endpoint: '${env:OTLP_HOST}:443'
     processors:
       tail_sampling:
         decision_wait: 10s
         policies:
-        - name: rate-limited-composite
-          type: composite
-          composite:
-            max_total_spans_per_second: 500
-            policy_order: [errors, slow-traces, rest]
-            composite_sub_policy:
-            - name: errors
-              type: status_code
-              status_code: 
-                status_codes: [ ERROR ]
-            - name: slow-traces
-              type: latency
-              latency:
-                threshold_ms: 1000
-            - name: rest
-              type: always_sample
-            rate_allocation:
-            - policy: errors
-              percent: 33
-            - policy: slow-traces
-              percent: 33
-            - policy: rest
-              percent: 34
+          - name: rate-limited-composite
+            type: composite
+            composite:
+              max_total_spans_per_second: 500
+              policy_order: [errors, slow-traces, rest]
+              composite_sub_policy:
+                - name: errors
+                  type: status_code
+                  status_code:
+                    status_codes: [ERROR]
+                - name: slow-traces
+                  type: latency
+                  latency:
+                    threshold_ms: 1000
+                - name: rest
+                  type: always_sample
+              rate_allocation:
+                - policy: errors
+                  percent: 33
+                - policy: slow-traces
+                  percent: 33
+                - policy: rest
+                  percent: 34
       resource:
         attributes:
-        - key: k8s.cluster.name
-          action: upsert
-          value: "${env:CLUSTER_NAME}"
-        - key: service.instance.id
-          from_attribute: k8s.pod.uid
-          action: insert
+          - key: k8s.cluster.name
+            action: upsert
+            value: '${env:CLUSTER_NAME}'
+          - key: service.instance.id
+            from_attribute: k8s.pod.uid
+            action: insert
+          - key: service.namespace
+            from_attribute: k8s.namespace.name
+            action: insert
       filter/dropMissingK8sAttributes:
         error_mode: ignore
         traces:
@@ -76,9 +79,9 @@ opentelemetry-collector:
       routing/traces:
         error_mode: ignore
         match_once: false
-        table: 
-        - statement: route()
-          pipelines: [traces/sampling, traces/spanmetrics]
+        table:
+          - statement: route()
+            pipelines: [traces/sampling, traces/spanmetrics]
     service:
       extensions:
         - health_check
