@@ -33,4 +33,19 @@ entries:
     urls:
     - stackstate-openlit-ext-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-05T14:25:13.864070464Z"
+  suse-observability-otel-collector:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-06T20:32:24.301941401Z"
+    dependencies:
+    - name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.108.1
+    description: A Helm chart for Kubernetes
+    digest: 3d3b5631a52aa88fd9e8bb8cb6a564042daf8e0592a5d5a0662f651cd251d479
+    name: suse-observability-otel-collector
+    type: application
+    urls:
+    - suse-observability-otel-collector-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-06T20:32:24.3019516Z"
