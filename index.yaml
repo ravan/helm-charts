@@ -36,6 +36,16 @@ entries:
   stackstate-openlit-ext:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2024-11-06T21:42:32.102723482Z"
+    description: A Helm chart for Kubernetes
+    digest: 058fad353b66b758e8141123d3c9a30ebc7bdc2eedf68fba91fdea856b12ef12
+    name: stackstate-openlit-ext
+    type: application
+    urls:
+    - stackstate-openlit-ext-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2024-11-05T14:25:13.864061507Z"
     description: A Helm chart for Kubernetes
     digest: 62b75a864791e1ca597ab62248724f1983dc04ddc480cce0d20075514824cbce
@@ -59,4 +69,4 @@ entries:
     urls:
     - suse-observability-otel-collector-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-06T21:18:42.305527231Z"
+generated: "2024-11-06T21:42:32.102750563Z"
