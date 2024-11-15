@@ -8,12 +8,12 @@ metadata:
 data:
   run.sh: |-
     #!/bin/sh
-    printf "Calling Simple App\n"
-    curl "http://${APP_SIMPLE_URL}:8000/ask"
-    printf "\nCalling Rag101 App\n"
-    curl "http://${APP_RAG101_URL}:8000/ask"
-    printf "\nCalling Rag102 App\n"
-    curl "http://${APP_RAG102_URL}:8000/ask"
+    printf "Calling Simple App (${APP_SIMPLE_URL})\n"
+    curl --no-progress-meter "http://${APP_SIMPLE_URL}:8000/ask"
+    printf "\nCalling Rag101 App (${APP_RAG101_URL})\n"
+    curl --no-progress-meter "http://${APP_RAG101_URL}:8000/ask"
+    printf "\nCalling Rag102 App (${APP_RAG102_URL})\n"
+    curl --no-progress-meter "http://${APP_RAG102_URL}:8000/ask"
     sleep 5
   
 ---
@@ -54,7 +54,7 @@ spec:
               - name: APP_RAG102_URL
                 value: {{ include "genai-observability-demo.fullname" . }}-rag102
             image: badouralix/curl-jq:alpine
-            imagePullPolicy: Always
+            imagePullPolicy: IfNotPresent 
             name: curl
             resources: {}
             terminationMessagePath: /dev/termination-log

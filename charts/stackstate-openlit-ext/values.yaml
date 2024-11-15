@@ -7,6 +7,7 @@ serverUrl: ''
 apiKey: ''
 apiToken: ''
 clusterName: ''
+legacyApi: "false"
 schedule: '*/5 * * * *'
 
 # This sets the container image

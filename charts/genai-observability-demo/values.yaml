@@ -5,6 +5,7 @@
 # Endpoints
 ollamaEndpoint: ''
 otlpEndpoint: ''
+collectGpuStats: 'false'
 
 schedule: '*/5 * * * *'
 

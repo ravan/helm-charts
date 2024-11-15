@@ -1,5 +1,6 @@
 {{- $serverUrl := .Values.serverUrl | required ".Values.serverUrl is required." -}}
 {{- $clusterName := .Values.clusterName | required ".Values.clusterName is required." -}}
+{{- $legacyApi := .Values.legacyApi | required ".Values.legacyApi is required." -}}
 ---
 apiVersion: batch/v1
 kind: CronJob
@@ -42,6 +43,8 @@ spec:
                 secretKeyRef:
                   key: API_TOKEN
                   name: {{ include "stackstate-openlit-ext.fullname" . }}-secret
+            - name: STACKSTATE_LEGACY_API
+              value: "{{ $legacyApi }}"
             - name: KUBERNETES_IN_CLUSTER
               value: "true"
             - name: KUBERNETES_CLUSTER
