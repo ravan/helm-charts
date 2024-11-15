@@ -13,6 +13,16 @@ entries:
     version: 0.1.0
   genai-observability-demo:
   - apiVersion: v2
+    appVersion: 0.0.6
+    created: "2024-11-15T09:51:20.522484649Z"
+    description: A Helm chart for Kubernetes
+    digest: 0e015d6ab1d9069a4f99729c39fc9df727d78dae26426d18ab6ac93de857ec20
+    name: genai-observability-demo
+    type: application
+    urls:
+    - genai-observability-demo-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.0.2
     created: "2024-11-06T21:18:42.305517293Z"
     description: A Helm chart for Kubernetes
@@ -69,4 +79,4 @@ entries:
     urls:
     - suse-observability-otel-collector-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-06T21:42:32.102750563Z"
+generated: "2024-11-15T09:51:20.64197822Z"
