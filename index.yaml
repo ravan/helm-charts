@@ -66,6 +66,20 @@ entries:
     version: 0.1.0
   suse-observability-otel-collector:
   - apiVersion: v2
+    appVersion: 0.108.1
+    created: "2025-03-04T15:34:47.469378927Z"
+    dependencies:
+    - name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.108.1
+    description: A Helm chart for Kubernetes
+    digest: 5347af60dd1544304ded05b48542f160e0c23f0f1f2fc49f7815db3501b9f98b
+    name: suse-observability-otel-collector
+    type: application
+    urls:
+    - suse-observability-otel-collector-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-11-06T20:32:24.301941401Z"
     dependencies:
@@ -79,4 +93,4 @@ entries:
     urls:
     - suse-observability-otel-collector-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-15T09:51:20.64197822Z"
+generated: "2025-03-04T15:34:47.469396921Z"
