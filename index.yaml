@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   elemental-lifecycle-manager:
   - apiVersion: v2
+    appVersion: a8debd2
+    created: "2026-05-14T13:30:32.482297828Z"
+    description: A Helm chart for the Elemental Lifecycle Manager
+    digest: 9f3e89e7b75851484c14cf3cefb08fd50f5e4531d3d9931a3af80432734cebf9
+    name: elemental-lifecycle-manager
+    type: application
+    urls:
+    - https://github.com/ravan/helm-charts/releases/download/elemental-lifecycle-manager-0.1.1/elemental-lifecycle-manager-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2026-05-14T13:49:57.970825+02:00"
     description: A Helm chart for the Elemental Lifecycle Manager
@@ -115,4 +125,4 @@ entries:
     urls:
     - suse-observability-otel-collector-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-14T13:49:57.97049+02:00"
+generated: "2026-05-14T13:30:32.482309496Z"
