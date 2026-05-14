@@ -1,9 +1,31 @@
 apiVersion: v1
 entries:
+  elemental-lifecycle-manager:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-05-14T13:49:57.970825+02:00"
+    description: A Helm chart for the Elemental Lifecycle Manager
+    digest: 0f9d6290b62e4415df88579a42e9baf31e19887cf4824b76867af602f0e3bc39
+    name: elemental-lifecycle-manager
+    type: application
+    urls:
+    - elemental-lifecycle-manager-0.1.0.tgz
+    version: 0.1.0
+  elemental-lifecycle-manager-crds:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-05-14T13:49:57.970968+02:00"
+    description: Custom Resource Definitions (CRDs) for the Elemental Lifecycle Manager
+    digest: 48110e1525806fa614ebc7dd37304a2080ad5fe886eb7e41318ebced82c6814d
+    name: elemental-lifecycle-manager-crds
+    type: application
+    urls:
+    - elemental-lifecycle-manager-crds-0.1.0.tgz
+    version: 0.1.0
   example:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-27T09:04:24.720274942Z"
+    created: "2026-05-14T13:49:57.971185+02:00"
     description: A Helm chart for Kubernetes
     digest: 467dddf934ea1ea9211aef8a8fb1a6f197d9b862fd92df6979d6a3409e96bd3d
     name: example
@@ -14,7 +36,7 @@ entries:
   genai-observability-demo:
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2024-11-15T09:51:20.522484649Z"
+    created: "2026-05-14T13:49:57.971587+02:00"
     description: A Helm chart for Kubernetes
     digest: 0e015d6ab1d9069a4f99729c39fc9df727d78dae26426d18ab6ac93de857ec20
     name: genai-observability-demo
@@ -24,7 +46,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2024-11-06T21:18:42.305517293Z"
+    created: "2026-05-14T13:49:57.971384+02:00"
     description: A Helm chart for Kubernetes
     digest: ef4d3aac8b582987d497a5ec4f327d46eadd282ac00a0666f0e99fe8a93811e9
     name: genai-observability-demo
@@ -35,7 +57,7 @@ entries:
   stackstate-k8s-ext:
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2024-10-16T14:21:28.731964765Z"
+    created: "2026-05-14T13:49:57.97174+02:00"
     description: A Helm chart for Kubernetes
     digest: 479abaac5301d7b4e0f2f5faaaebb7e45283f64c3b94b18841c0532d6979546e
     name: stackstate-k8s-ext
@@ -46,7 +68,7 @@ entries:
   stackstate-openlit-ext:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-11-06T21:42:32.102723482Z"
+    created: "2026-05-14T13:49:57.972047+02:00"
     description: A Helm chart for Kubernetes
     digest: 058fad353b66b758e8141123d3c9a30ebc7bdc2eedf68fba91fdea856b12ef12
     name: stackstate-openlit-ext
@@ -56,7 +78,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-11-05T14:25:13.864061507Z"
+    created: "2026-05-14T13:49:57.971888+02:00"
     description: A Helm chart for Kubernetes
     digest: 62b75a864791e1ca597ab62248724f1983dc04ddc480cce0d20075514824cbce
     name: stackstate-openlit-ext
@@ -67,7 +89,7 @@ entries:
   suse-observability-otel-collector:
   - apiVersion: v2
     appVersion: 0.108.1
-    created: "2025-03-04T15:34:47.469378927Z"
+    created: "2026-05-14T13:49:57.97558+02:00"
     dependencies:
     - name: opentelemetry-collector
       repository: https://open-telemetry.github.io/opentelemetry-helm-charts
@@ -81,7 +103,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-06T20:32:24.301941401Z"
+    created: "2026-05-14T13:49:57.973991+02:00"
     dependencies:
     - name: opentelemetry-collector
       repository: https://open-telemetry.github.io/opentelemetry-helm-charts
@@ -93,4 +115,4 @@ entries:
     urls:
     - suse-observability-otel-collector-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-04T15:34:47.469396921Z"
+generated: "2026-05-14T13:49:57.97049+02:00"
