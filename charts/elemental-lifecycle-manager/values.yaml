@@ -4,7 +4,7 @@ image:
   repository: docker.io/ravan/elemental-lifecycle-manager
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "fa5e5eb"
+  tag: "97d6af2"
 
 imagePullSecrets: []
 nameOverride: ""
