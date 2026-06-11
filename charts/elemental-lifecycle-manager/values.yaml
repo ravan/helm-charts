@@ -38,6 +38,9 @@ nodeSelector: {}
 tolerations: []
 affinity: {}
 
+sucPlan:
+  tolerations: []
+
 # Health probe configuration.
 healthProbe:
   liveness:
