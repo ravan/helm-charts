@@ -46,7 +46,7 @@ spec:
       {{- if .Values.enableHTTP2 }}
       {{- $args = append $args "--enable-http2" }}
       {{- end }}
-      {{- $args = append $args (printf "--suc-plan-tolerations-json=%s" (.Values.sucPlan.tolerations | toJson | quote)) }}
+      {{- $args = append $args (printf "--suc-plan-tolerations-json=%s" (.Values.sucPlan.tolerations | toJson)) }}
       {{- with .Values.extraArgs }}
       {{- $args = concat $args . }}
       {{- end }}
